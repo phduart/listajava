@@ -1,0 +1,15 @@
+Para executar a aplicação
+
+1 - importe o arquivo 'paulodump.sql' 
+		no terminal do mysql 
+		comando: mysql -u root -p < paulodump.sql
+	o banco de dados será criado 
+		banco: dev_be
+
+2 - Importe os projetos no eclipse
+
+3 - No projeto 'pauloduarte' vá para 
+	src/main/java > br.com.pauloduarte e no arquivo 'Configuracao.java'
+	clique o botão direito > Run as > Java Aplication
+	
+4 - Acesso no navegador a url 'http://localhost:8080/'

@@ -1,0 +1,13 @@
+/home/duart/eclipse-workspace/spring-server/src/main/java/io/swagger/configuration/JacksonConfiguration.java
+/home/duart/eclipse-workspace/spring-server/src/main/java/io/swagger/model/Cliente.java
+/home/duart/eclipse-workspace/spring-server/src/main/java/io/swagger/configuration/HomeController.java
+/home/duart/eclipse-workspace/spring-server/src/main/java/io/swagger/configuration/SwaggerDocumentationConfig.java
+/home/duart/eclipse-workspace/spring-server/src/main/java/io/swagger/api/ListaclientesApiController.java
+/home/duart/eclipse-workspace/spring-server/src/main/java/io/swagger/api/ApiResponseMessage.java
+/home/duart/eclipse-workspace/spring-server/src/main/java/io/swagger/api/ListaclientesApi.java
+/home/duart/eclipse-workspace/spring-server/src/main/java/io/swagger/api/ApiException.java
+/home/duart/eclipse-workspace/spring-server/src/main/java/io/swagger/api/NotFoundException.java
+/home/duart/eclipse-workspace/spring-server/src/main/java/io/swagger/api/ApiOriginFilter.java
+/home/duart/eclipse-workspace/spring-server/src/main/java/io/swagger/configuration/CustomInstantDeserializer.java
+/home/duart/eclipse-workspace/spring-server/src/main/java/io/swagger/RFC3339DateFormat.java
+/home/duart/eclipse-workspace/spring-server/src/main/java/io/swagger/Swagger2SpringBoot.java
