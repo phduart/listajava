@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Gerenciamento de Clientes</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+	<div class="container">
+		
+		<div id="listaDeClientes">
+		    <table class="table table-hover">
+		        <thead>
+		        <tr>
+		        	<th>Código Cliente</th>
+		            <th>Nome</th>
+		            <th>CPF</th>
+		            <th>Email</th>
+		            <th>Plano</th>
+		            <th>Valor</th>
+		            <th>Dia de Vencimento</th>
+		        </tr>
+		        </thead>
+		        <tr th:each="cliente : ${clientes}">
+		        	<td> <span th:text="${cliente.id}"></span> </td>
+		            <td> <span th:text="${cliente.nome}"></span> </td>
+		            <td> <span th:text="${cliente.cpf}"></span> </td>
+		            <td> <span th:text="${cliente.email}"></span> </td>
+		            <td> <span th:text="${cliente.plano}"></span> </td>
+		            <td> <span th:text="${cliente.valorplano}"></span> </td>
+		            <td> <span th:text="${cliente.vencimentofat}"></span> </td>
+		            <td>
+			            <form action="remover" method="post">
+			            	<button th:value="${cliente.id}" name="id" id="id" type="submit" class="btn btn-warning">Remover</button>
+			            </form>
+		            </td>
+		            <td>
+			            <form action="cancelar" method="post">
+			            	<button th:value="${cliente.id}" name="id" id="id" type="submit" class="btn btn-danger">Cancelar</button>
+			            </form>
+		            </td>	            
+		        </tr>
+		    </table>
+		</div>
+		
+		<hr/>
+			
+		<form action="salvar" method="post">
+		    <div class="form-group">
+		        <label for="nome">Nome Completo:</label> 
+		        <input type="text" class="form-control" id="nome" name="nome" placeholder="Ex: Paulo Duarte"/>
+		    </div>
+		    <div class="form-group">
+		        <label for="email">E-mail:</label> 
+		        <input type="email" class="form-control" id="email" name="email" placeholder="Ex: ph.duartte97@gmail.com"/>
+		    </div>
+		    <div class="form-group">
+		        <label for="cpf">CPF:</label> 
+		        <input  onchange="TestaCPF" type="text" class="form-control" id="cpf" name="cpf" placeholder="XXXXXXXXXXX"/>
+		    </div>
+		    <div class="form-group">
+			    <label  for="plano">Plano:</label>
+			    <select class="form-control" id="plano" name="plano">
+			      <option>A</option>
+			      <option>B</option>
+			      <option>C</option>
+			    </select>
+			</div>
+		    <div class="form-group">
+		        <label for="valorplano">Valor Plano:</label> 
+		        <input type="number" class="form-control" id="valorplano" name="valorplano" placeholder="99.00"/>
+		    </div>
+		    <div class="form-group">
+		        <label for="vencimentofat">Vencimento da Fatura:</label> 
+		        <input max="30" type="number" class="form-control" id="vencimentofat" name="vencimentofat" placeholder="Dia"/>
+		    </div>
+		    <button type="submit" class="btn btn-success">Cadastrar</button>
+		</form>
+		
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
